@@ -1,13 +1,273 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>CADBOXX PROJECT</title>
 
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100%;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #e8f1e7;
+            color: #17351d;
+        }
+
+        /* ---------- HEADER ---------- */
+
+        header {
+            background: #17351d;
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: clamp(30px, 5vw, 52px);
+            font-weight: 700;
+        }
+
+        header p {
+            margin: 10px 0 0;
+            font-size: clamp(15px, 2vw, 20px);
+            opacity: 0.85;
+        }
+
+        /* ---------- MAIN ---------- */
+
+        main {
+            width: 100%;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 40px 25px 60px;
+        }
+
+        .gallery {
+            display: grid;
+
+            /* Three equally sized columns */
+            grid-template-columns: repeat(3, 1fr);
+
+            /* Equal spacing */
+            gap: 30px;
+        }
+
+        /* ---------- IMAGE BUTTON ---------- */
+
+        .app-button {
+            display: block;
+            width: 100%;
+
+            padding: 0;
+            border: none;
+            background: transparent;
+
+            text-decoration: none;
+            cursor: pointer;
+
+            border-radius: 14px;
+
+            overflow: hidden;
+
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+        .app-button:hover {
+            transform: translateY(-6px);
+
+            box-shadow:
+                0 12px 28px rgba(0, 0, 0, 0.25);
+        }
+
+        .app-button:active {
+            transform: translateY(-2px);
+        }
+
+        .app-button img {
+            display: block;
+
+            width: 100%;
+
+            /* Maintains the requested 600 × 700 ratio */
+            aspect-ratio: 600 / 700;
+
+            height: auto;
+
+            object-fit: cover;
+        }
+
+        /* ---------- FOOTER ---------- */
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #17351d;
+            color: white;
+            font-size: 14px;
+            opacity: 0.95;
+        }
+
+        /* ---------- TABLET ---------- */
+
+        @media (max-width: 900px) {
+
+            main {
+                padding: 30px 20px 50px;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 22px;
+            }
+        }
+
+        /* ---------- PHONE ---------- */
+
+        @media (max-width: 600px) {
+
+            header {
+                padding: 28px 15px;
+            }
+
+            main {
+                padding: 20px 15px 40px;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .app-button img {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
-<body>
-<cnter><img src=""cadboxx_logo.PNG ></center>
 
+<body>
+
+    <header>
+        <img src="images/headerbanner.png" >
+        
+        <p>Account holders can log on. New sers can create their account.</p>
+    </header>
+
+    <main>
+
+        <div class="gallery">
+            <!-- APP index -->
+            <a class="app-button" href="apps/app7.html"><!--cadboxx app-->
+                <img
+                    src="images/cadboxxlogo.PNG"
+                    alt=""
+                    width="600"
+                    height="700">
+            </a>
+            <!-- APP 1 -->
+            <a class="app-button" href="apps/app1.html"><!--nft collections-->
+                <img
+                    src="images/project.png"
+                    alt=""
+                    width="600"
+                    height="700">
+            </a>
+
+            <!-- APP 2 -->
+            <a class="app-button" href="apps/3dviewer.net"><!--3dviewer-->
+                <img
+                    src="images/app2.png"
+                    alt=""
+                    width="600"
+                    height="700">
+            </a>
+
+            <!-- APP 3 -->
+            <a class="app-button" href="apps/app3.html"><!--Sketchfab-->
+                <img
+                    src="images/sketchfab.png"
+                    alt=""
+                    width="600"
+                    height="700">
+            </a>
+
+            <!-- APP 4 -->
+            <a class="app-button" href="apps/app4.html"><!--coinbase-->
+                <img
+                    src="images/cashboxx.png"
+                    alt=""
+                    width="600"
+                    height="700">
+            </a>
+
+            <!-- APP 5 -->
+            <a class="app-button" href="apps/texture_loader.html"><!--texture change--->
+                <img
+                    src="images/texture_loader.png"
+                    alt=""
+                    width="600"
+                    height="700">
+            </a>
+
+            <!-- APP 6 -->
+            <a class="app-button" href="apps/app6.html"><!--image creator-->
+                <img
+                    src="images/create_nft_collection.png"
+                    alt=""
+                    width="600"
+                    height="700">
+            </a>
+
+            <!-- APP 7 -->
+            <a class="app-button" href="apps/app7.html"><!--store-->
+                <img
+                    src="images/app7.png"
+                    alt="Football NFT Creator 7"
+                    width="600"
+                    height="700">
+            </a>
+
+            <!-- APP 8 -->
+            <a class="app-button" href="apps/app8.html"><!--specials-->
+                <img
+                    src="images/app8.png"
+                    alt="Football NFT Creator 8"
+                    width="600"
+                    height="700">
+            </a>
+
+            <!-- APP 9 -->
+            <a class="app-button" href="apps/app9.html"><!--minting app-->
+                <img
+                    src="images/https://www.google.com/url?sa=t&source=web&rct=j&url=https%3A%2F%2Fcoinmarketcap.com%2Facademy%2Farticle%2Fhow-to-mint-an-nft-for-free-broke-people-edition&ved=0CBYQjRxqFwoTCLjjk9fR3pYDFQAAAAAdAAAAABAH&opi=89978449"
+                    alt="Football NFT Creator 9"
+                    width="600"
+                    height="700">
+            </a>
+
+        </div>
+
+    </main>
+
+    <footer>
+        Cadboxx Studio Pro
+    </footer>
 
 </body>
-
 </html>
