@@ -1,144 +1,315 @@
+
+Skip to content
+caddboxxpro
+cadboxx-platform
+Repository navigation
+Code
+Issues
+Pull requests
+Agents
+Actions
+Projects
+Wiki
+Security and quality
+Insights
+Settings
+cadboxx-platform
+/indevx.html
+Go to file
+t
+T
+caddboxxpro
+caddboxxpro
+Update indevx.html
+4f6cc21
+ · 
+yesterday
+cadboxx-platform
+/indevx.html
+
+Code
+
+Blame
+273 lines (215 loc) · 6.57 KB
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-* {
-  box-sizing: border-box;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
+    <title>CADBOXX PROJECT</title>
 
-[class*="col-"] {
-  float: left;
-  padding: 15px;
-}
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-html {
-  font-family: "Lucida Sans", sans-serif;
-}
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100%;
+        }
 
-.header {
-  background-color: #9933cc;
-  color: black;
-  padding: 15px;
-}
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #e8f1e7;
+            color: #17351d;
+        }
 
-.menu ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
+        /* ---------- HEADER ---------- */
 
-.menu li {
-  padding: 8px;
-  margin-bottom: 7px;
-  background-color: #33b5e5;
-  color: black;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-}
+        header {
+            background: #17351d;
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
 
-.menu li:hover {
-  background-color: red;
-}
+        header h1 {
+            margin: 0;
+            font-size: clamp(30px, 5vw, 52px);
+            font-weight: 700;
+        }
 
-.aside {
-  background-color: green;
-  padding: 15px;
-  color: black;
-  text-align: center;
-  font-size: 14px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-}
+        header p {
+            margin: 10px 0 0;
+            font-size: clamp(15px, 2vw, 20px);
+            opacity: 0.85;
+        }
 
-.footer {
-  background-color: green;
-  color: black;
-  text-align: center;
-  font-size: 12px;
-  padding: 15px;
-}
+        /* ---------- MAIN ---------- */
 
-/* For mobile phones: */
-[class*="col-"] {
-  width: 100%;
-}
+        main {
+            width: 100%;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 40px 25px 60px;
+        }
 
-@media only screen and (min-width: 600px) {
-  /* For tablets: */
-  .col-s-1 {width: 8.33%;}
-  .col-s-2 {width: 16.66%;}
-  .col-s-3 {width: 25%;}
-  .col-s-4 {width: 33.33%;}
-  .col-s-5 {width: 41.66%;}
-  .col-s-6 {width: 50%;}
-  .col-s-7 {width: 58.33%;}
-  .col-s-8 {width: 66.66%;}
-  .col-s-9 {width: 75%;}
-  .col-s-10 {width: 83.33%;}
-  .col-s-11 {width: 91.66%;}
-  .col-s-12 {width: 100%;}
-}
-@media only screen and (min-width: 768px) {
-  /* For desktop: */
-  .col-1 {width: 8.33%;}
-  .col-2 {width: 16.66%;}
-  .col-3 {width: 25%;}
-  .col-4 {width: 33.33%;}
-  .col-5 {width: 41.66%;}
-  .col-6 {width: 50%;}
-  .col-7 {width: 58.33%;}
-  .col-8 {width: 66.66%;}
-  .col-9 {width: 75%;}
-  .col-10 {width: 83.33%;}
-  .col-11 {width: 91.66%;}
-  .col-12 {width: 100%;}
-}
-</style>
+        .gallery {
+            display: grid;
+
+            /* Three equally sized columns */
+            grid-template-columns: repeat(3, 1fr);
+
+            /* Equal spacing */
+            gap: 30px;
+        }
+
+        /* ---------- IMAGE BUTTON ---------- */
+
+        .app-button {
+            display: block;
+            width: 100%;
+
+            padding: 0;
+            border: none;
+            background: transparent;
+
+            text-decoration: none;
+            cursor: pointer;
+
+            border-radius: 14px;
+
+            overflow: hidden;
+
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+        .app-button:hover {
+            transform: translateY(-6px);
+
+            box-shadow:
+                0 12px 28px rgba(0, 0, 0, 0.25);
+        }
+
+        .app-button:active {
+            transform: translateY(-2px);
+        }
+
+        .app-button img {
+            display: block;
+
+            width: 100%;
+
+            /* Maintains the requested 600 × 700 ratio */
+            aspect-ratio: 600 / 700;
+
+            height: auto;
+
+            object-fit: cover;
+        }
+
+        /* ---------- FOOTER ---------- */
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #17351d;
+            color: white;
+            font-size: 14px;
+            opacity: 0.95;
+        }
+
+        /* ---------- TABLET ---------- */
+
+        @media (max-width: 900px) {
+
+            main {
+                padding: 30px 20px 50px;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 22px;
+            }
+        }
+
+        /* ---------- PHONE ---------- */
+
+        @media (max-width: 600px) {
+
+            header {
+                padding: 28px 15px;
+            }
+
+            main {
+                padding: 20px 15px 40px;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .app-button img {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-<div class="header">
-  <img src="cadboxxlogo.PNG" class="clickable" style="width:15%;height:15%" onclick="height:5%:" ></img>
-</div>
+    <header>
+        <img src="images/headerbanner.png" >
+        
+        <p>Account holders can log on. New sers can create their account.</p>
+    </header>
 
-<div class="row">
-  <div class="col-3 col-s-3 menu">
-    <ul>
-      <button class="clickable" target="_blank" href="mousekeyboard.html" ><h2>Mouse + Keyboard</h2></button>
-      <li><h2>Gaming Controller</h2></li>
-       <li><h2>Oculus Touch</h2></li>
-      <li><h2>Hand Controls</h2></li>
-      <li><h2>VR HMD</h2></li>
-      <li><h2>CUSTOM</h2></li>
-    </ul>
-  </div>
+    <main>
 
-  <div class="col-6 col-s-9">
-    <h1>CADBOXX</h1>
-    <p><h2>2>CADBOXX is a 3D environment for creating assemblies of moving components so that the user can visualise their design as it develops.</h2></p>
-  </div>
+        <div class="gallery">
+            <!-- APP index -->
+            <a class="app-button" href="apps/app7.html"><!--cadboxx app-->
+                <img
+                    src="images/cadboxxlogo.PNG"
+                    alt=""
+                    width="600"
+                    height="700">
+            </a>
+            <!-- APP 1 -->
+            <a class="app-button" href="apps/app1.html"><!--nft collections-->
+                <img
+                    src="images/project.png"
+                    alt=""
+                    width="600"
+                    height="700">
+            </a>
 
-  <div class="col-3 col-s-12">
-    <div class="aside">
-      <h2>BENEFITS?</h2>
-      <p>Faster to create and develop designs</p>
-      <h2>FEATURES</h2>
-      <p>All the usual features and many more</p>
-      <h2>COST</h2>
-      <p>CADBOXX is free to use</p>
-    </div>
-  </div>
-</div>
+            <!-- APP 2 -->
+            <a class="app-button" href="apps/3dviewer.net"><!--3dviewer-->
+                <img
+                    src="images/app2.png"
+                    alt=""
+                    width="600"
+                    height="700">
+            </a>
 
-<div class="footer">
-  <p>There is nothing nlioke this on the market and a vision into the future</p>
-</div>
+            <!-- APP 3 -->
+            <a class="app-button" href="apps/app3.html"><!--Sketchfab-->
+                <img
+                    src="images/sketchfab.png"
+                    alt=""
+                    width="600"
+                    height="700">
+            </a>
+
+            <!-- APP 4 -->
+            <a class="app-button" href="apps/app4.html"><!--coinbase-->
+                <img
+                    src="images/cashboxx.png"
+                    alt=""
+                    width="600"
+                    height="700">
+            </a>
+
+            <!-- APP 5 -->
+            <a class="app-button" href="apps/texture_loader.html"><!--texture change--->
+                <img
+                    src="images/texture_loader.png"
+                    alt=""
+                    width="600"
+                    height="700">
+            </a>
+
+            <!-- APP 6 -->
+            <a class="app-button" href="apps/app6.html"><!--image creator-->
+                <img
+                    src="images/create_nft_collection.png"
+                    alt=""
+                    width="600"
+                    height="700">
+            </a>
+
+            <!-- APP 7 -->
+            <a class="app-button" href="apps/app7.html"><!--store-->
+                <img
+                    src="images/app7.png"
+                    alt="Football NFT Creator 7"
+                    width="600"
+                    height="700">
+            </a>
+
+            <!-- APP 8 -->
+            <a class="app-button" href="apps/app8.html"><!--specials-->
+                <img
+                    src="images/app8.png"
+                    alt="Football NFT Creator 8"
+                    width="600"
+                    height="700">
+            </a>
+
+            <!-- APP 9 -->
+            <a class="app-button" href="apps/app9.html"><!--minting app-->
+                <img
+                    src="images/https://www.google.com/url?sa=t&source=web&rct=j&url=https%3A%2F%2Fcoinmarketcap.com%2Facademy%2Farticle%2Fhow-to-mint-an-nft-for-free-broke-people-edition&ved=0CBYQjRxqFwoTCLjjk9fR3pYDFQAAAAAdAAAAABAH&opi=89978449"
+                    alt="Football NFT Creator 9"
+                    width="600"
+                    height="700">
+            </a>
+
+        </div>
+
+    </main>
+
+    <footer>
+        Cadboxx Studio Pro
+    </footer>
 
 </body>
 </html>
-                
+
+
+
+
+
+
+
+
+
